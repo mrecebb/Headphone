@@ -1,0 +1,53 @@
+:root {
+    --center: #b8b8b8;
+    --mid: #acabab;
+    --edge: #717171;
+    --overlay: rgba(255, 255, 255, 0.03);
+    --vignette: rgba(0, 0, 0, 0.58);
+}
+
+/*BASLIQDAKI ARXA FON*/
+.start-header {
+    height: 800px;
+    border-radius: 16px;
+    padding-top: 15px;
+    /* 3 qat olacaq: 1) ince diagonal tonlama 2) radial işıqlandırma 3) texture/vignette */
+    background-image: linear-gradient(135deg, var(--overlay) 0%, transparent 40%),
+    radial-gradient(circle at 50% 45%,
+            var(--center) 0%,
+            var(--mid) 28%,
+            #c0c3c5 55%,
+            var(--edge) 100%);
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(0.99, 0.98);
+    z-index: 0;
+}
+
+/* DERINLESDIRILEN KENARLAR */
+.start-header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    box-shadow: inset 0 80px 120px rgba(0, 0, 0, 0.06),
+    inset 0 -80px 120px rgba(0, 0, 0, 0.06),
+    inset 0 0 220px var(--vignette);
+    border-radius: 16px;
+    z-index: -1;
+}
+
+/* BASLIQDAQKI HEADPHONE IMAGE */
+.start-header .headphone-image {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    height: 1100px;
+    background-image: url("../images/headphone.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: inherit;
+    pointer-events: none;
+}

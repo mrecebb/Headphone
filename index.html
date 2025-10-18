@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- CSS links -->
+    <link rel="stylesheet" href="css/headerBackground.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/headerStyle.css">
+    <link rel="stylesheet" href="css/userLoginPopup.css">
+    <link rel="stylesheet" href="css/newLaunches.css">
+    <link rel="stylesheet" href="css/audioCategory.css">
+    <link rel="stylesheet" href="css/yearsCategory.css">
+    <link rel="stylesheet" href="css/picturesCategory.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/leftBar.css">
+
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/icon/headphone-icon-circle.png" type="image/x-icon">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <title>Headphone</title>
+</head>
+<body id="headphone">
+<div class="start-header">
+    <div class="headphone-image"></div>
+    <div class="menu-bar">
+        <div class="left-content">
+            <div class="menu-icon" onclick="openLeftBar()">
+                <span class="line-1 line"></span>
+                <span class="line-2 line"></span>
+            </div>
+        </div>
+        <div class="right-content">
+            <div class="search icon" onclick="openUserLogin()">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="basket icon" onclick="openUserLogin()">
+                <i class="fa-solid fa-basket-shopping"></i>
+            </div>
+            <div class="user-login icon" onclick="openUserLogin()">
+                <i class="fa-regular fa-user"></i>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="center-content">
+            <div class="medal-icon">
+                <i class="fa-solid fa-medal"></i>
+            </div>
+            <h1 class="site-header">Headphone</h1>
+            <p class="subtitle">Meet your new headphone best friend before they run out.</p>
+            <a href="#new-launches" class="button buy-now-button">
+                <div>Buy Now</div>
+            </a>
+        </div>
+        <div class="top-left-content">
+            <div class="happy-buyers">
+                <p id="buyers-counter" class="counter buyers-counter">168K</p>
+                <p class="counter-title">Happy Buyers</p>
+            </div>
+            <div class="customer-ratings">
+                <p id="ratings-counter" class="counter ratings-counter">4.7</p>
+                <p class="counter-title">Customer Ratings</p>
+            </div>
+        </div>
+        <div class="top-right-content">
+            <p class="line-1 line">Flagship Open-Back</p>
+            <p class="line-2 line">Headphone</p>
+        </div>
+        <div class="bottom-left-content">
+            <div class="icon">
+                <i class="fa-regular fa-hard-drive"></i>
+            </div>
+            <p class="header-text">400mAh</p>
+            <p class="subtitle-text">Powerful and long-lasting battery</p>
+            <div class="line">
+                <div class="line-horizontal"></div>
+                <div class="line-diagonal"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
+        <div class="bottom-right-content">
+            <div class="icon">
+                <i class="fa-brands fa-bluetooth-b"></i>
+            </div>
+            <p class="header-text">Bluetooth 5.0</p>
+            <p class="subtitle-text">Using the best bluetooth connection</p>
+            <div class="line">
+                <div class="circle"></div>
+                <div class="line-diagonal"></div>
+                <div class="line-horizontal"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="left-bar">
+    <div class="overlay" onclick="closeLeftBar()"></div>
+    <div class="left-bar-content">
+        <div class="close-icon" onclick="closeLeftBar()">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="products category">
+            <p class="header">Products</p>
+            <ul>
+                <li><a href="#">In-Ears</a></li>
+                <li><a href="#">Headphones</a></li>
+                <li><a href="#">Speaker</a></li>
+                <li><a href="#">Studio</a></li>
+                <li><a href="#">AMPS</a></li>
+                <li><a href="#">DAC</a></li>
+                <li><a href="#">Laptop</a></li>
+                <li><a href="#">Desktop</a></li>
+                <li><a href="#">Earbuds</a></li>
+                <li><a href="#">Earphone</a></li>
+                <li><a href="#">Audio Player</a></li>
+            </ul>
+        </div>
+        <div class="featured category">
+            <p class="header">Featured</p>
+            <ul>
+                <li><a href="#">New arrivals</a></li>
+                <li><a href="#">Top Picks</a></li>
+                <li><a href="#">Last change</a></li>
+            </ul>
+        </div>
+        <div class="contact category">
+            <p class="header">Contact</p>
+            <ul>
+                <li>+994 12 345 67 89</li>
+                <li>contact@headphone.com</li>
+            </ul>
+        </div>
+        <div class="social category">
+            <div class="line"></div>
+            <div class="facebook">
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+            </div>
+            <div class="instagram">
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="user-login-popup">
+    <div class="overlay" id="user-overlay" onclick="closeUserLogin()"></div>
+    <div class="close-button" onclick="closeUserLogin()">
+        <i class="fa-solid fa-xmark"></i>
+    </div>
+    <div class="popup">
+        <div class="popup-content">
+            <h1>Login</h1>
+            <form action="get" class="login-form">
+                <label for="email">Email: <br>
+                    <input type="email" id="email" placeholder="example@headphone.com" required>
+                </label>
+                <label for="password">Password: <br>
+                    <input type="password" id="password" placeholder="your password..." required>
+                </label>
+                <input type="submit" class="submit" value="Submit">
+            </form>
+            <a href="" class="forgot-password-link">Forgot your password?</a>
+        </div>
+    </div>
+</div>
+<div class="new-launches fadeInUpAnimation" id="new-launches">
+    <div class="category-header">
+        <p class="small-header">New Launches</p>
+        <p class="big-header">Fresh off the boat</p>
+    </div>
+    <div class="launches">
+        <a href="#" class="launches-link">
+            <div class="product-1 product">
+                <div class="image">
+                    <div class="overlay"></div>
+                    <button class="fav-icon icon" onclick="openUserLogin()"
+                            style="background-color: transparent; border: none;">
+                        <i class="fa-regular fa-heart fa-icon"></i>
+                    </button>
+                    <button class="basket-icon icon" onclick="openUserLogin()"
+                            style="background-color: transparent; border: none;">
+                        <i class="fa-solid fa-basket-shopping fa-icon"></i>
+                    </button>
+                </div>
+                <p class="product-name">Head Audio - Headphone Two</p>
+                <div class="product-price">
+                    <p class="price">$ 159.99</p>
+                    <p class="discount-price">$ 199.99</p>
+                </div>
+            </div>
+        </a>
+        <a href="#" class="launches-link">
+            <div class="product-2 product">
+                <div class="image">
+                    <button class="fav-icon icon" onclick="openUserLogin()"
+                            style="background-color: transparent; border: none;">
+                        <i class="fa-regular fa-heart fa-icon"></i>
+                    </button>
+                    <button class="basket-icon icon" onclick="openUserLogin()"
+                            style="background-color: transparent; border: none;">
+                        <i class="fa-solid fa-basket-shopping fa-icon"></i>
+                    </button>
+                </div>
+                <p class="product-name">Head Audio - Headphone Two</p>
+                <div class="product-price">
+                    <p class="price">$ 159.99</p>
+                    <p class="discount-price">$ 199.99</p>
+                </div>
+            </div>
+        </a>
+        <a href="#" class="launches-link">
+            <div class="product-3 product">
+                <div class="image">
+                    <button class="fav-icon icon" onclick="openUserLogin()"
+                            style="background-color: transparent; border: none;">
+                        <i class="fa-regular fa-heart fa-icon"></i>
+                    </button>
+                    <button class="basket-icon icon" onclick="openUserLogin()"
+                            style="background-color: transparent; border: none;">
+                        <i class="fa-solid fa-basket-shopping fa-icon"></i>
+                    </button>
+                </div>
+                <p class="product-name">Head Audio - Headphone Two</p>
+                <div class="product-price">
+                    <p class="price">$ 159.99</p>
+                    <p class="discount-price">$ 199.99</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+<div class="audio-category fadeInUpAnimation">
+    <div class="category-header">
+        <p class="small-header">Audio Category</p>
+        <p class="big-header">Start your audiophile journey here</p>
+    </div>
+    <div class="circle-item">
+        <div class="left-item">
+            <div class="center"></div>
+            <div class="items">
+                <div class="item item-0" style="--i:0;">
+                    <div class="icon">
+                        <i class="fa-solid fa-wifi"></i>
+                    </div>
+                    <p>Wireless Headphones</p>
+                </div>
+
+                <div class="item item-1" style="--i:1;">
+                    <div class="icon">
+                        <i class="fa-solid fa-file-audio"></i>
+                    </div>
+                    <p>High-Resolution Audio Player</p>
+                </div>
+
+                <div class="item item-2" style="--i:2;">
+                    <div class="icon">
+                        <i class="fa-solid fa-microphone"></i>
+                    </div>
+                    <p>True Wireless Earbuds</p>
+                </div>
+                <div class="item item-3" style="--i:3;">
+                    <div class="icon">
+                        <i class="fa-solid fa-music"></i>
+                    </div>
+                    <p>Headphone Pads</p>
+                </div>
+
+                <div class="item item-4" style="--i:4;">
+                    <div class="icon">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <p>Studio & Professional</p>
+                </div>
+            </div>
+        </div>
+        <div class="right-item">
+            <div class="center"></div>
+            <div class="items">
+                <div class="item item-5" style="--i:0;">
+                    <div class="icon">
+                        <i class="fa-solid fa-display"></i>
+                    </div>
+                    <p>Desktop AMPS & Dac</p>
+                </div>
+                <div class="item item-6" style="--i:1;">
+                    <div class="icon">
+                        <i class="fa-brands fa-usb"></i>
+                    </div>
+                    <p>AMPS & Portable Dac</p>
+                </div>
+
+                <div class="item item-7" style="--i:2;">
+                    <div class="icon">
+                        <i class="fa-solid fa-headphones"></i>
+                    </div>
+                    <p>Featured Headphones</p>
+                </div>
+
+                <div class="item item-8" style="--i:3;">
+                    <div class="icon">
+                        <i class="fa-solid fa-hard-drive"></i>
+                    </div>
+                    <p>Headphones for beginners</p>
+                </div>
+                <div class="item item-9" style="--i:4;">
+                    <div class="icon">
+                        <i class="fa-solid fa-ear-listen"></i>
+                    </div>
+                    <p>In-ears for beginners</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="center-picture">
+        <img src="images/headphone-side.webp" alt="Headphone" class="center-image">
+    </div>
+    <a href="#new-launches" class="button explore-button">
+        <div>Explore products now</div>
+    </a>
+    <div class="overlay-top overlay"></div>
+    <div class="overlay-bottom overlay"></div>
+</div>
+<div class="years-category fadeInUpAnimation">
+    <div class="contents">
+        <div class="content year-2015">
+            <div class="picture">
+                <img src="images/year-category/year-category-1.jpg" alt="Year Category Picture">
+            </div>
+            <div class="texts">
+                <div class="year-text">2015</div>
+                <div class="header">Headphones are not just devices—they're a new lifestyle</div>
+                <div class="text">In 2015, headphones evolved beyond mere tools for listening to music. They became a
+                    way to create personal space. Minimalist designs and the first active noise cancellation
+                    technologies marked the beginning of a new era.
+                </div>
+            </div>
+        </div>
+        <div class="content year-2016">
+            <div class="picture">
+                <img src="images/year-category/year-category-2.jpg" alt="Year Category Picture">
+            </div>
+            <div class="texts">
+                <div class="year-text">2016</div>
+                <div class="header">Where fashion meets technology</div>
+                <div class="text">Headphones started being seen as fashion accessories. Colorful designs, foldable
+                    structures, and Bluetooth connectivity offered users both comfort and style.
+                </div>
+            </div>
+        </div>
+        <div class="content year-2017">
+            <div class="picture">
+                <img src="images/year-category/year-category-3.jpg" alt="Year Category Picture">
+            </div>
+            <div class="texts">
+                <div class="year-text">2017</div>
+                <div class="header">Cut the cords, focus on the sound</div>
+                <div class="text">Wireless headphones took over the market. Apple AirPods and other brands ushered in a
+                    new era. Users embraced fewer restrictions and more freedom of movement.
+                </div>
+            </div>
+        </div>
+        <div class="content year-2018">
+            <div class="picture">
+                <img src="images/year-category/year-category-4.jpg" alt="Year Category Picture">
+            </div>
+            <div class="texts">
+                <div class="year-text">2018</div>
+                <div class="header">Headphones conquer the international market</div>
+                <div class="text">In the era of technological globalization, headphones have become a remarkable
+                    phenomenon that has taken the international market by storm. The pleasure of listening to music,
+                    playing games or listening to audio content has driven the popularity of headphones to reach its
+                    peak. With innovative designs and advanced technology, modern headphones are not only a functional
+                    audio device, but also a highly desirable symbol of lifestyle.
+                </div>
+            </div>
+        </div>
+        <div class="content year-2019">
+            <div class="picture">
+                <img src="images/year-category/year-category-5.jpg" alt="Year Category Picture">
+            </div>
+            <div class="texts">
+                <div class="year-text">2019</div>
+                <div class="header">Hi-Fi technology becomes accessible to all</div>
+                <div class="text">Premium sound quality was no longer reserved for audiophiles. With ANC (Active Noise
+                    Cancellation) and HD audio support, headphones delivered high-end experiences to everyday users.
+                </div>
+            </div>
+        </div>
+        <div class="content year-2020">
+            <div class="picture">
+                <img src="images/year-category/year-category-6.jpg" alt="Year Category Picture">
+            </div>
+            <div class="texts">
+                <div class="year-text">2020</div>
+                <div class="header">The rise of headphones in home offices</div>
+                <div class="text">During COVID-19, headphones became essential tools for work and education. Models with
+                    microphones, long-term comfort, and video call optimization came to the forefront.
+                </div>
+            </div>
+        </div>
+        <div class="content year-2021">
+            <div class="picture">
+                <img src="images/year-category/year-category-7.jpg" alt="Year Category Picture">
+            </div>
+            <div class="texts">
+                <div class="year-text">2021</div>
+                <div class="header">Voice assistants now live in our ears</div>
+                <div class="text">Siri, Google Assistant, and other voice assistants were integrated into headphones.
+                    Beyond music, users could now manage daily tasks through voice commands.
+                </div>
+            </div>
+        </div>
+        <div class="content year-2022">
+            <div class="picture">
+                <img src="images/year-category/year-category-8.jpg" alt="Year Category Picture">
+            </div>
+            <div class="texts">
+                <div class="year-text">2022</div>
+                <div class="header">Technology makes peace with nature</div>
+                <div class="text">Headphone manufacturers shifted toward eco-conscious materials. Recyclable plastics,
+                    energy-efficient batteries, and ethical production processes became the new standard.
+                </div>
+            </div>
+        </div>
+        <div class="content year-2023">
+            <div class="picture">
+                <img src="images/year-category/year-category-9.jpg" alt="Year Category Picture">
+            </div>
+            <div class="texts">
+                <div class="year-text">2023</div>
+                <div class="header">The sound gateway to virtual worlds</div>
+                <div class="text">With the rise of the Metaverse and VR technologies, headphones became central to
+                    immersive experiences. 3D audio and spatial sound transported users into entirely new realms.
+                </div>
+            </div>
+        </div>
+        <div class="content year-2024">
+            <div class="picture">
+                <img src="images/year-category/year-category-10.jpg" alt="Year Category Picture">
+            </div>
+            <div class="texts">
+                <div class="year-text">2024</div>
+                <div class="header">Sound tailored to your ears</div>
+                <div class="text">AI-powered headphones began optimizing sound based on individual hearing profiles. A
+                    personalized audio experience became possible for everyone.
+                </div>
+            </div>
+        </div>
+        <div class="content year-2025">
+            <div class="picture">
+                <img src="images/year-category/year-category-11.jpg" alt="Year Category Picture">
+            </div>
+            <div class="texts">
+                <div class="year-text">2025</div>
+                <div class="header">Sound, style, and AI converge</div>
+                <div class="text">Headphones are now an inseparable part of lifestyle. With wearable tech, biometric
+                    sensors, and real-time translation features, they synchronize not just with music—but with life
+                    itself.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="buttons">
+        <div class="left-button button-circle" onclick="goLeft()">
+            <i class="fa-solid fa-arrow-left"></i>
+        </div>
+        <div class="right-button button-circle" onclick="goRight()">
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+    </div>
+    <div class="years-line">
+        <div class="line"></div>
+        <div class="circles">
+            <div class="circle-item circle-item-1" style="--i:0" onclick="open2015()">
+                <div class="circle"></div>
+                <p>2015</p>
+            </div>
+            <div class="circle-item circle-item-2" style="--i:1" onclick="open2016()">
+                <div class="circle"></div>
+                <p>2016</p>
+            </div>
+            <div class="circle-item circle-item-3" style="--i:2" onclick="open2017()">
+                <div class="circle"></div>
+                <p>2017</p>
+            </div>
+            <div class="circle-item circle-item-4" style="--i:3" onclick="open2018()">
+                <div class="circle"></div>
+                <p>2018</p>
+            </div>
+            <div class="circle-item circle-item-5" style="--i:4" onclick="open2019()">
+                <div class="circle"></div>
+                <p>2019</p>
+            </div>
+            <div class="circle-item circle-item-6" style="--i:5" onclick="open2020()">
+                <div class="circle"></div>
+                <p>2020</p>
+            </div>
+            <div class="circle-item circle-item-7" style="--i:6" onclick="open2021()">
+                <div class="circle"></div>
+                <p>2021</p>
+            </div>
+            <div class="circle-item circle-item-8" style="--i:7" onclick="open2022()">
+                <div class="circle"></div>
+                <p>2022</p>
+            </div>
+            <div class="circle-item circle-item-9" style="--i:8" onclick="open2023()">
+                <div class="circle"></div>
+                <p>2023</p>
+            </div>
+            <div class="circle-item circle-item-10" style="--i:9" onclick="open2024()">
+                <div class="circle"></div>
+                <p>2024</p>
+            </div>
+            <div class="circle-item circle-item-11" style="--i:10" onclick="open2025()">
+                <div class="circle"></div>
+                <p>2025</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="pictures-category fadeInUpAnimation">
+    <div class="category">
+        <div class="picture-1 picture"></div>
+        <div class="picture-2 picture"></div>
+        <div class="picture-3 picture"></div>
+    </div>
+</div>
+<div class="footer">
+    <div class="icons">
+        <div class="site-icon">
+            <a href="#headphone">
+                <img src="images/icon/headphone-icon-removebg.png" alt="ICON">
+            </a>
+        </div>
+        <div class="bottom-icons">
+            <div class="line"></div>
+            <div class="facebook">
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+            </div>
+            <div class="instagram">
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="products">
+        <p class="header product-header">Products</p>
+        <ul>
+            <li><a href="#">In-Ears</a></li>
+            <li><a href="#">Headphones</a></li>
+            <li><a href="#">Speaker</a></li>
+            <li><a href="#">Studio</a></li>
+            <li><a href="#">AMPS</a></li>
+            <li><a href="#">DAC</a></li>
+            <li><a href="#">Laptop</a></li>
+            <li><a href="#">Desktop</a></li>
+            <li><a href="#">Earbuds</a></li>
+            <li><a href="#">Earphone</a></li>
+            <li><a href="#">Audio Player</a></li>
+        </ul>
+    </div>
+    <div class="featured">
+        <p class="header featured-header">Featured</p>
+        <ul>
+            <li><a href="#">New arrivals</a></li>
+            <li><a href="#">Top Picks</a></li>
+            <li><a href="#">Last change</a></li>
+        </ul>
+    </div>
+    <div class="contact">
+        <p class="header contact-header">Contact</p>
+        <ul>
+            <li>+994 12 345 67 89</li>
+            <li>contact@headphone.com</li>
+        </ul>
+    </div>
+</div>
+
+<!-- JavaScrips -->
+<script src="js/userLoginController.js"></script>
+<script src="js/yearsController.js"></script>
+<script src="js/animationTrigger.js"></script>
+<script src="js/leftBarController.js"></script>
+</body>
+</html>

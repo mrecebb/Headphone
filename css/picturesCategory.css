@@ -1,0 +1,40 @@
+/*PICTURES GRID*/
+.pictures-category .category {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    margin: 100px 200px;
+}
+
+.pictures-category .category .picture {
+    border-radius: 15px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+
+.pictures-category .category .picture-1 {
+    background-image: url("../images/headphone-on-the-table.jpg");
+    grid-row: span 2 / span 2;
+    height: 70vh;
+}
+
+.pictures-category .category .picture-2 {
+    background-image: url("../images/earbuds-1.jpg");
+}
+
+.pictures-category .category .picture-3 {
+    background-image: url("../images/earbuds-2.jpg");
+    grid-column-start: 2;
+}
+
+.pictures-category .category .picture-1,
+.pictures-category .category .picture-2,
+.pictures-category .category .picture-3 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.pictures-category .category .picture-2,
+.pictures-category .category .picture-3 {
+}

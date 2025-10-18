@@ -1,0 +1,78 @@
+.left-bar-content {
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: -500px;
+    width: 500px;
+    height: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
+    transition: 0.3s all ease-out;
+}
+
+.left-bar .overlay {
+    background-color: rgba(0,0,0,0.85);
+    pointer-events: none;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s all ease-out;
+
+}
+
+.left-bar .close-icon {
+    position: absolute;
+    right: 30px;
+}
+
+.left-bar .close-icon i {
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.left-bar .header {
+    color: rgba(150, 150, 150, 1);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.left-bar a {
+    color: white;
+    text-decoration: none;
+}
+
+.left-bar a:hover {
+    text-decoration: underline;
+}
+
+
+.left-bar ul li {
+    list-style: none;
+}
+
+.left-bar .social {
+    margin-top: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.left-bar .social .line {
+    height: 50px;
+    width: 1px;
+    border: 1px solid white;
+}
+
+.left-bar .social i {
+    font-size: 20px;
+}

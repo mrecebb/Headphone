@@ -1,0 +1,20 @@
+.fadeInUpAnimation {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.fadeInUpAnimation.visible {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

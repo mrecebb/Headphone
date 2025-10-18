@@ -1,0 +1,163 @@
+/*TEMEL*/
+.audio-category {
+    position: relative;
+    margin-top: 100px;
+}
+
+.circle-item {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*SOL VE SAG YARIMKURELER*/
+.audio-category .left-item,
+.audio-category .right-item {
+    position: absolute;
+}
+
+.audio-category .left-item {
+    transform: translateX(50px);
+}
+
+.audio-category .right-item {
+    transform: translateX(-50px);
+}
+
+/*CERCIVELER*/
+.audio-category .center {
+    width: 80vh;
+    height: 80vh;
+    border: 3px solid rgba(150, 150, 150, 1);
+    border-radius: 50%;
+}
+
+.audio-category .left-item .center {
+    clip-path: inset(0 0 0 50%);
+}
+
+.audio-category .right-item .center {
+    clip-path: inset(0 50% 0 0);
+}
+
+/*CERCIVE ETRAFINDAKI DAIRELER*/
+.audio-category .items {
+    transform: translate(-60px, -350px);
+}
+
+.audio-category .left-item .item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* merkezden her elementi 20 derece ferqle donderib radius qeder ileri hereket etdir, sonra evvelki rotate qaytar */
+    transform: rotate(calc(-40deg + 20deg * var(--i))) translate(40vh) rotate(calc(40deg - 20deg * var(--i)));
+    width: 120px;
+}
+
+.audio-category .right-item .item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: rotate(calc(140deg + 20deg * var(--i))) translate(40vh) rotate(calc(-140deg - 20deg * var(--i)));
+    width: 120px;
+}
+
+/* DAIRELERIN ICINDEKI ICONLAR */
+.audio-category .icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(222, 222, 222, 1);
+    outline: 5px solid white;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    margin: 0 auto 8px;
+    cursor: pointer;
+    transition: 0.2s all ease-out;
+}
+
+.audio-category .icon:hover {
+    background-color: black;
+    color: var(--yellow);
+    transform: scale(1.5);
+}
+
+.audio-category .circle-item .item-7 .icon {
+    background-color: black;
+    color: var(--yellow);
+    transform: scale(1.5);
+}
+
+/* DAIRELERIN KENARINDAKI YAZILAR */
+.audio-category .item p {
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.3;
+    width: 150%;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.audio-category .circle-item .item-0 p,
+.audio-category .circle-item .item-1 p,
+.audio-category .circle-item .item-2 p,
+.audio-category .circle-item .item-3 p,
+.audio-category .circle-item .item-4 p {
+    text-align: left;
+    transform: translate(120px, -50px);
+}
+
+.audio-category .circle-item .item-5 p,
+.audio-category .circle-item .item-6 p,
+.audio-category .circle-item .item-7 p,
+.audio-category .circle-item .item-8 p,
+.audio-category .circle-item .item-9 p {
+    text-align: right;
+    transform: translate(-170px, -50px);
+}
+
+/*MERKEZDEKI SEKIL*/
+.audio-category .center-picture .center-image {
+    position: absolute;
+    top: 400px;
+    width: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/*EXPLORE BUTTON*/
+.audio-category .explore-button {
+    position: absolute;
+    bottom: 50px;
+    width: 270px;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+}
+
+/*OVERLAY*/
+.audio-category .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+}
+
+.audio-category .overlay-top {
+    bottom: 60px;
+    background: linear-gradient(to bottom, transparent, white, white);
+}
+
+.audio-category .overlay-bottom {
+    top: 220px;
+    background: linear-gradient(to bottom, white, white, transparent);
+}

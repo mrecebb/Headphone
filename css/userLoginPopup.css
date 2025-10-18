@@ -1,0 +1,96 @@
+/* TEMEL */
+.user-login-popup {
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s all ease-out;
+}
+
+/* ARXA FONU QARALTAN OVERLAY */
+.user-login-popup .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.85);
+    z-index: 0;
+}
+
+/* POPUP */
+.user-login-popup .popup {
+    position: absolute;
+    height: 100%;
+    left: calc(50% - 300px);
+    top: calc(50% - 200px);
+}
+
+.user-login-popup .popup .popup-content {
+    width: 600px;
+    height: 400px;
+    background-color: white;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-login-popup .popup .popup-content .forgot-password-link {
+    color: #0095ff;
+    margin-top: 10px;
+}
+
+.user-login-popup .popup .popup-content .login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.user-login-popup .popup .popup-content .login-form input {
+    width: 400px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    outline: none;
+    margin-top: 5px;
+    transition: 0.2s all ease-out;
+}
+
+.user-login-popup .popup .popup-content .login-form input:focus {
+    outline: none;
+    border: 1px solid var(--yellow);
+}
+
+.user-login-popup .popup .popup-content .login-form .submit {
+    border: 1px solid transparent;
+    background-color: var(--yellow);
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s all ease-out;
+}
+
+.user-login-popup .popup .popup-content .login-form .submit:hover {
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+}
+
+/* POPUPU BAGLAMA BUTTON-U */
+.user-login-popup .close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    cursor: pointer;
+}
+
+.user-login-popup .close-button .fa-solid {
+    width: auto;
+    padding: 30px;
+    font-size: 30px;
+    border-radius: 50%;
+}
