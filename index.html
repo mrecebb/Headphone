@@ -596,12 +596,6 @@
 <script src="js/yearsController.js"></script>
 <script src="js/animationTrigger.js"></script>
 <script src="js/leftBarController.js"></script>
-<script>
-    const cursorBorder = document.querySelector(".cursor-circle");
-
-    document.addEventListener("mousemove", (e) => {
-        cursorBorder.style.transform = `translate(${e.clientX - 20}px, ${e.clientY - 20}px)`;
-    });
-</script>
+<script src="js/cursorCircle.js"></script>
 </body>
 </html>
