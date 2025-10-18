@@ -1,6 +1,7 @@
 # My Portfolio Website
 
 A responsive personal portfolio website built with HTML, CSS, and JavaScript. This project showcases my skills in frontend development and clean UI design.
+All the codes written belong to me.
 
 ---
 
@@ -15,7 +16,6 @@ Visit the live site here: [My Website](https://headphone-rgb.netlify.app/)
 ## Features
 
 - Responsive design (mobile and desktop friendly)
-- Contact form with validation
 - Smooth scroll and section animations
 - Modular and clean code structure
 
