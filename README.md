@@ -9,7 +9,10 @@ All the codes written belong to me.
 
 Visit the live site here: [My Website](https://headphone-rgb.netlify.app/)
 
-![Screenshot](images/website-view.png)
+![Screenshot](images/site-view-mobile-and-web.png)
+
+Full Responsive Site
+![Screenshot](images/site-view-full-screen.png)
 
 ---
 
