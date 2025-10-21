@@ -1,71 +1,84 @@
 /*TEMEL*/
 .audio-category {
+    height: 1000px;
+}
+
+.audio-category-wrapper {
     position: relative;
-    margin-top: 100px;
 }
 
 .circle-item {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 700px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+/*BASLIQLAR*/
+
+.audio-category .category-header {
+    height: 300px;
+    justify-content: end !important;
+}
+
 /*SOL VE SAG YARIMKURELER*/
-.audio-category .left-item,
-.audio-category .right-item {
+.audio-category-wrapper .left-item,
+.audio-category-wrapper .right-item {
     position: absolute;
 }
 
-.audio-category .left-item {
+.audio-category-wrapper .left-item {
     transform: translateX(50px);
 }
 
-.audio-category .right-item {
+.audio-category-wrapper .right-item {
     transform: translateX(-50px);
 }
 
 /*CERCIVELER*/
-.audio-category .center {
-    width: 80vh;
-    height: 80vh;
+.audio-category-wrapper .center {
+    width: 600px;
+    height: 600px;
     border: 3px solid rgba(150, 150, 150, 1);
     border-radius: 50%;
 }
 
-.audio-category .left-item .center {
+.audio-category-wrapper .left-item .center {
     clip-path: inset(0 0 0 50%);
 }
 
-.audio-category .right-item .center {
+.audio-category-wrapper .right-item .center {
     clip-path: inset(0 50% 0 0);
 }
 
 /*CERCIVE ETRAFINDAKI DAIRELER*/
-.audio-category .items {
-    transform: translate(-60px, -350px);
+.audio-category-wrapper .items {
+    position: absolute;
+    left: 240px;
+    top: 270px;
 }
 
-.audio-category .left-item .item {
+.audio-category-wrapper .left-item .item {
     position: absolute;
     top: 50%;
     left: 50%;
     /* merkezden her elementi 20 derece ferqle donderib radius qeder ileri hereket etdir, sonra evvelki rotate qaytar */
-    transform: rotate(calc(-40deg + 20deg * var(--i))) translate(40vh) rotate(calc(40deg - 20deg * var(--i)));
+    transform: rotate(calc(-40deg + 20deg * var(--i))) translate(300px) rotate(calc(40deg - 20deg * var(--i)));
     width: 120px;
 }
 
-.audio-category .right-item .item {
+.audio-category-wrapper .right-item .item {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: rotate(calc(140deg + 20deg * var(--i))) translate(40vh) rotate(calc(-140deg - 20deg * var(--i)));
+    transform: rotate(calc(140deg + 20deg * var(--i))) translate(300px) rotate(calc(-140deg - 20deg * var(--i)));
     width: 120px;
 }
 
 /* DAIRELERIN ICINDEKI ICONLAR */
-.audio-category .icon {
+.audio-category-wrapper .icon {
     width: 50px;
     height: 50px;
     background: rgba(222, 222, 222, 1);
@@ -81,20 +94,20 @@
     transition: 0.2s all ease-out;
 }
 
-.audio-category .icon:hover {
+.audio-category-wrapper .icon:hover {
     background-color: black;
     color: var(--yellow);
     transform: scale(1.5);
 }
 
-.audio-category .circle-item .item-7 .icon {
+.audio-category-wrapper .circle-item .item-7 .icon {
     background-color: black;
     color: var(--yellow);
     transform: scale(1.5);
 }
 
 /* DAIRELERIN KENARINDAKI YAZILAR */
-.audio-category .item p {
+.audio-category-wrapper .item p {
     font-size: 16px;
     margin: 0;
     line-height: 1.3;
@@ -103,31 +116,23 @@
     transition: 0.3s;
 }
 
-.audio-category .circle-item .item-0 p,
-.audio-category .circle-item .item-1 p,
-.audio-category .circle-item .item-2 p,
-.audio-category .circle-item .item-3 p,
-.audio-category .circle-item .item-4 p {
+.audio-category-wrapper .circle-item .left-item .item p {
     text-align: left;
     transform: translate(120px, -50px);
 }
 
-.audio-category .circle-item .item-5 p,
-.audio-category .circle-item .item-6 p,
-.audio-category .circle-item .item-7 p,
-.audio-category .circle-item .item-8 p,
-.audio-category .circle-item .item-9 p {
+.audio-category-wrapper .circle-item .right-item .item p{
     text-align: right;
     transform: translate(-170px, -50px);
 }
 
 /*MERKEZDEKI SEKIL*/
-.audio-category .center-picture .center-image {
+.audio-category-wrapper .center-picture .center-image {
     position: absolute;
-    top: 400px;
-    width: 50vh;
-    margin-left: auto;
-    margin-right: auto;
+    width: 375px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
     user-select: none;
@@ -135,29 +140,31 @@
 }
 
 /*EXPLORE BUTTON*/
-.audio-category .explore-button {
+.audio-category-wrapper .explore-button {
     position: absolute;
-    bottom: 50px;
     width: 270px;
-    margin-right: auto;
-    margin-left: auto;
+    top: 50%;
+    margin: 0 auto;
     left: 0;
     right: 0;
+    transform: translateY(270px);
 }
 
 /*OVERLAY*/
-.audio-category .overlay {
+.audio-category-wrapper .overlay {
     position: absolute;
+    top: 50%;
     width: 100%;
     height: 100px;
+    pointer-events: none;
 }
 
-.audio-category .overlay-top {
-    bottom: 60px;
+.audio-category-wrapper .overlay-top {
+    transform: translateY(200px);
     background: linear-gradient(to bottom, transparent, white, white);
 }
 
-.audio-category .overlay-bottom {
-    top: 220px;
+.audio-category-wrapper .overlay-bottom {
+    transform: translateY(-300px);
     background: linear-gradient(to bottom, white, white, transparent);
 }

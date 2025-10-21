@@ -20,6 +20,7 @@
     color: black;
     text-decoration: none;
     width: 33%;
+    z-index: -10;
 }
 
 .new-launches .launches .launches-link .product {

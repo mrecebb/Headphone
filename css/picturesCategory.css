@@ -15,7 +15,7 @@
 .pictures-category .category .picture-1 {
     background-image: url("../images/headphone-on-the-table.jpg");
     grid-row: span 2 / span 2;
-    height: 70vh;
+    height: 600px;
 }
 
 .pictures-category .category .picture-2 {

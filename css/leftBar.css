@@ -2,8 +2,8 @@
     padding: 20px;
     position: fixed;
     top: 0;
-    left: -500px;
-    width: 500px;
+    left: -300px;
+    width: 300px;
     height: 100%;
     background-color: black;
     color: white;
@@ -12,6 +12,8 @@
     gap: 20px;
     box-shadow: 0 0 40px rgba(0,0,0,0.5);
     transition: 0.3s all ease-out;
+    overflow-y: auto;
+    z-index: 100;
 }
 
 .left-bar .overlay {

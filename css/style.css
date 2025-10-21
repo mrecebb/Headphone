@@ -6,6 +6,11 @@
     scroll-behavior: smooth;
 }
 
+body {
+    overflow-x: hidden;
+    position: relative;
+}
+
 /*ALL BUTTONS*/
 button {
     border: none;
@@ -34,9 +39,14 @@ button {
     color: var(--yellow);
 }
 
+/*BUTUN SAYT*/
+.site-body {
+    background-color: white;
+}
+
 /*HEADER TEXTS*/
 .category-header {
-    width: 70vh;
+    width: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;

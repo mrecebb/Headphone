@@ -35,8 +35,6 @@
 .years-category .contents {
     display: flex;
     background: none;
-    margin: 0 100px 100px 100px;
-    padding-top: 100px;
 }
 
 
@@ -45,6 +43,8 @@
     display: flex;
     gap: 50px;
     transition: 0.2s all ease-out;
+    padding: 10% 10% 0 10%;
+
 }
 
 .years-category .contents .year-2015,
@@ -68,22 +68,25 @@
 
 /*content picture*/
 .years-category .contents .content .picture {
-    width: 100vh;
-    height: 60vh;
+    box-sizing: border-box;
+    width: 50%;
+    height: 500px;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .years-category .contents .content .picture img {
-    height: 120%;
+    width: 100%;
+    height: 100%;
     user-select: none;
     -webkit-user-drag: none;
+    object-fit: cover;
 }
 
 /*content text*/
 .years-category .contents .content .texts {
-    width: 80%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -91,13 +94,11 @@
 }
 
 .years-category .contents .content .texts .header {
-    width: 70%;
     font-size: 40px;
 }
 
 .years-category .contents .content .texts .text {
     line-height: 2;
-    width: 70%;
 }
 
 /*CEVIRME BUTONLARI*/
@@ -144,7 +145,7 @@
     width: 85%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 570px;
+    margin-top: 670px;
 }
 
 .years-category .years-line .line {
