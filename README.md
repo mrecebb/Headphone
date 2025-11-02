@@ -1,4 +1,4 @@
-# My Portfolio Website
+# My Responsive Website
 
 A responsive personal portfolio website built with HTML, CSS, and JavaScript. This project showcases my skills in frontend development and clean UI design.
 All the codes written belong to me.
